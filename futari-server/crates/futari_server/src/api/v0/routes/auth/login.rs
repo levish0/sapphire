@@ -3,10 +3,7 @@ use crate::service::auth::login::service_login;
 use crate::state::AppState;
 use crate::utils::extract::extract_user_agent::extract_user_agent;
 use axum::response::IntoResponse;
-use axum::{
-    extract::State,
-    response::Response,
-};
+use axum::{extract::State, response::Response};
 use axum_extra::{TypedHeader, headers::UserAgent};
 use futari_dto::auth::request::LoginRequest;
 use futari_dto::auth::response::TotpRequiredResponse;
@@ -34,8 +31,7 @@ pub async fn auth_login(
     ValidatedJson(payload): ValidatedJson<LoginRequest>,
 ) -> Result<Response, Errors> {
     let user_agent = extract_user_agent(user_agent);
-    let result =
-        service_login(&state.db, &state.redis_session, payload, Some(user_agent)).await?;
+    let result = service_login(&state.db, &state.redis_session, payload, Some(user_agent)).await?;
 
     match result {
         LoginResult::SessionCreated {

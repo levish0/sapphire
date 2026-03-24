@@ -39,8 +39,8 @@ pub async fn service_login(
     verify_password(&payload.password, &password_hash).map_err(|_| Errors::InvalidCredentials)?;
 
     if user.totp_enabled_at.is_some() {
-        let temp_token = TotpTempToken::create(redis, user.id, user_agent, payload.remember_me)
-            .await?;
+        let temp_token =
+            TotpTempToken::create(redis, user.id, user_agent, payload.remember_me).await?;
 
         info!(user_id = %user.id, "Login requires TOTP");
         return Ok(LoginResult::TotpRequired(temp_token.token));

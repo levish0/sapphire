@@ -30,5 +30,12 @@ pub async fn ban_user(
     RequiredSession(session): RequiredSession,
     ValidatedJson(payload): ValidatedJson<BanUserRequest>,
 ) -> Result<BanUserResponse, Errors> {
-    service_ban_user(&state.db, payload.user_id, payload.expires_at, payload.reason, &session).await
+    service_ban_user(
+        &state.db,
+        payload.user_id,
+        payload.expires_at,
+        payload.reason,
+        &session,
+    )
+    .await
 }

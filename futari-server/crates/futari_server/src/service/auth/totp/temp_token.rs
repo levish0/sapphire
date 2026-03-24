@@ -19,11 +19,7 @@ pub struct TotpTempToken {
 
 impl TotpTempToken {
     ///
-    pub fn new(
-        user_id: Uuid,
-        user_agent: Option<String>,
-        remember_me: bool,
-    ) -> Self {
+    pub fn new(user_id: Uuid, user_agent: Option<String>, remember_me: bool) -> Self {
         let mut bytes = [0u8; 32];
         rand::rng().fill_bytes(&mut bytes);
         let token = hex::encode(bytes);

@@ -66,12 +66,9 @@ where
         repository_find_user_by_oauth(conn, OAuthProvider::Github, &user_info.id.to_string())
             .await?
     {
-        let session = SessionService::create_session(
-            redis_conn,
-            existing_user.id.to_string(),
-            user_agent,
-        )
-        .await?;
+        let session =
+            SessionService::create_session(redis_conn, existing_user.id.to_string(), user_agent)
+                .await?;
 
         return Ok(SignInResult::Success(session.session_id));
     }

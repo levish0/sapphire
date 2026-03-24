@@ -202,8 +202,7 @@ where
         worker_client::index_user(worker, new_user.id).await.ok();
 
         let session =
-            SessionService::create_session(redis_conn, new_user.id.to_string(), user_agent)
-                .await?;
+            SessionService::create_session(redis_conn, new_user.id.to_string(), user_agent).await?;
 
         Ok(session.session_id)
     }

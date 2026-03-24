@@ -3,10 +3,7 @@ use crate::service::oauth::google::service_google_sign_in;
 use crate::state::AppState;
 use crate::utils::extract::extract_user_agent::extract_user_agent;
 use axum::Extension;
-use axum::{
-    extract::State,
-    response::Response,
-};
+use axum::{extract::State, response::Response};
 use axum_extra::{TypedHeader, headers::UserAgent};
 use futari_dto::oauth::request::google::GoogleLoginRequest;
 use futari_dto::oauth::response::{OAuthPendingSignupResponse, OAuthSignInResponse};

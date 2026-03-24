@@ -55,12 +55,9 @@ where
     if let Some(existing_user) =
         repository_find_user_by_oauth(conn, OAuthProvider::Google, &user_info.id).await?
     {
-        let session = SessionService::create_session(
-            redis_conn,
-            existing_user.id.to_string(),
-            user_agent,
-        )
-        .await?;
+        let session =
+            SessionService::create_session(redis_conn, existing_user.id.to_string(), user_agent)
+                .await?;
 
         return Ok(SignInResult::Success(session.session_id));
     }

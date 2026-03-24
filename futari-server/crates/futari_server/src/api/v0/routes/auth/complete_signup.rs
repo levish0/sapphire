@@ -3,10 +3,7 @@ use crate::service::oauth::complete_signup::service_complete_signup;
 use crate::state::AppState;
 use crate::utils::extract::extract_user_agent::extract_user_agent;
 use axum::Extension;
-use axum::{
-    extract::State,
-    response::Response,
-};
+use axum::{extract::State, response::Response};
 use axum_extra::{TypedHeader, headers::UserAgent};
 use futari_dto::auth::request::CompleteSignupRequest;
 use futari_dto::auth::response::create_login_response;
