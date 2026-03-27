@@ -1,0 +1,20 @@
+[package]
+name = "sapphire_errors"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+rust-version .workspace = true
+license.workspace = true
+description = "sapphire_errors"
+
+[dependencies]
+# Internal crates
+sapphire_config = { workspace = true }
+
+# External dependencies
+serde = { workspace = true }
+sea-orm = { workspace = true }
+utoipa = { workspace = true }
+axum = { workspace = true }
+tracing = { workspace = true }

@@ -18,7 +18,7 @@ jobs:
     
     defaults:
       run:
-        working-directory: futari-ui
+        working-directory: sapphire-ui
         
     steps:
       - name: Checkout code
@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: futari-ui/.nvmrc
+          node-version-file: sapphire-ui/.nvmrc
 
       - name: Install pnpm
         run: npm install -g pnpm

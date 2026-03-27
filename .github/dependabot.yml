@@ -6,11 +6,11 @@
 version: 2
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/futari-ui/" # Location of package manifests
+    directory: "/sapphire-ui/" # Location of package manifests
     schedule:
       interval: "weekly"
       
   - package-ecosystem: "cargo" # See documentation for possible values
-    directory: "/futari-server/" # Location of package manifests
+    directory: "/sapphire-server/" # Location of package manifests
     schedule:
       interval: "weekly"

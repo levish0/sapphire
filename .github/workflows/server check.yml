@@ -12,7 +12,7 @@ jobs:
     
     defaults:
       run:
-        working-directory: futari-server
+        working-directory: sapphire-server
 
     steps:
       - uses: actions/checkout@v4
