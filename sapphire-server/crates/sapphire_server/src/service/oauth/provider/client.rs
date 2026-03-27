@@ -1,10 +1,10 @@
 use crate::service::oauth::provider::config::OAuthProviderConfig;
-use sapphire_errors::errors::Errors;
 use oauth2::{
     AuthUrl, AuthorizationCode, ClientId, ClientSecret, CsrfToken, PkceCodeChallenge,
     PkceCodeVerifier, RedirectUrl, Scope, TokenResponse, TokenUrl, basic::BasicClient,
 };
 use reqwest::Client as HttpClient;
+use sapphire_errors::errors::Errors;
 
 /// Returns: (auth_url, state, pkce_verifier)
 pub fn generate_auth_url<P: OAuthProviderConfig>(

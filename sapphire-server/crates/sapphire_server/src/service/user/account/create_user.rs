@@ -6,10 +6,10 @@ use crate::service::auth::verify_email::{
 };
 use crate::state::WorkerClient;
 use crate::utils::crypto::password::hash_password;
+use redis::aio::ConnectionManager;
 use sapphire_config::ServerConfig;
 use sapphire_dto::user::{CreateUserRequest, CreateUserResponse};
 use sapphire_errors::errors::{Errors, ServiceResult};
-use redis::aio::ConnectionManager;
 use sea_orm::DatabaseConnection;
 
 /// Accept a signup request and defer user creation until email verification.

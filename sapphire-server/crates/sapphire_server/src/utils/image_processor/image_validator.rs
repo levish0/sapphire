@@ -1,8 +1,8 @@
 use crate::utils::image_processor::image_processor::ImageProcessor;
 use blake3;
-use sapphire_errors::errors::Errors;
 use image::{ImageFormat, ImageReader};
 use infer;
+use sapphire_errors::errors::Errors;
 use std::io::Cursor;
 
 /// Maximum image size before optimization (10MB)

@@ -2,8 +2,8 @@ use crate::connection::r2_assets_conn::R2AssetsClient;
 use crate::utils::image_processor::image_validator::{
     generate_image_hash, process_image_for_upload, validate_image,
 };
-use sapphire_constants::{PROFILE_IMAGE_MAX_SIZE, user_image_key};
 use reqwest::Client as HttpClient;
+use sapphire_constants::{PROFILE_IMAGE_MAX_SIZE, user_image_key};
 use tracing::{error, warn};
 
 ///

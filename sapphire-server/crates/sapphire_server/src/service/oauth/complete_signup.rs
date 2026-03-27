@@ -13,11 +13,11 @@ use crate::service::oauth::download_profile_image::download_and_upload_profile_i
 use crate::service::oauth::types::PendingSignupData;
 use crate::state::WorkerClient;
 use crate::utils::redis_cache::delete_key;
-use sapphire_constants::{oauth_pending_key, oauth_pending_lock_key};
-use sapphire_errors::errors::{Errors, ServiceResult};
 use redis::AsyncCommands;
 use redis::aio::ConnectionManager;
 use reqwest::Client as HttpClient;
+use sapphire_constants::{oauth_pending_key, oauth_pending_lock_key};
+use sapphire_errors::errors::{Errors, ServiceResult};
 use sea_orm::{ConnectionTrait, TransactionSession, TransactionTrait};
 use std::sync::LazyLock;
 use tracing::{info, warn};

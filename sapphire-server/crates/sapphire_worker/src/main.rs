@@ -1,4 +1,5 @@
 use anyhow::Result;
+use futures::FutureExt;
 use sapphire_worker::clients;
 use sapphire_worker::config::WorkerConfig;
 use sapphire_worker::connection;
@@ -6,7 +7,6 @@ use sapphire_worker::jobs::{self, WorkerContext};
 use sapphire_worker::nats::streams::initialize_all_streams;
 use sapphire_worker::utils;
 use sapphire_worker::{CacheClient, DbPool};
-use futures::FutureExt;
 use std::any::Any;
 use std::panic::AssertUnwindSafe;
 use std::sync::Arc;

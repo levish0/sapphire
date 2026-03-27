@@ -1,5 +1,5 @@
-use sapphire_errors::errors::Errors;
 use image::{DynamicImage, GenericImageView, ImageFormat, ImageReader, codecs::gif::GifDecoder};
+use sapphire_errors::errors::Errors;
 use std::io::Cursor;
 
 pub struct ImageProcessor;

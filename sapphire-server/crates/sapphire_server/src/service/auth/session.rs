@@ -1,9 +1,9 @@
 use crate::service::auth::session_types::Session;
 use chrono::Utc;
-use sapphire_config::ServerConfig;
-use sapphire_errors::errors::Errors;
 use redis::AsyncCommands;
 use redis::aio::ConnectionManager as RedisClient;
+use sapphire_config::ServerConfig;
+use sapphire_errors::errors::Errors;
 use std::collections::HashSet;
 
 /// Data structure for session service.

@@ -2,9 +2,9 @@ use crate::service::eventstream::service_stream_actions;
 use crate::state::AppState;
 use axum::extract::State;
 use axum::response::sse::{Event, KeepAlive, Sse};
+use futures::Stream;
 use sapphire_dto::action_logs::StreamActionsQuery;
 use sapphire_dto::validator::query_validator::ValidatedQuery;
-use futures::Stream;
 use std::convert::Infallible;
 use std::time::Duration;
 

@@ -10,8 +10,8 @@ use axum::{
     middleware::Next,
     response::{IntoResponse, Response},
 };
-use sapphire_errors::errors::Errors;
 use redis::aio::ConnectionManager;
+use sapphire_errors::errors::Errors;
 use std::net::SocketAddr;
 use std::sync::LazyLock;
 use std::time::{SystemTime, UNIX_EPOCH};

@@ -7,9 +7,9 @@ use crate::service::auth::verify_email::{
     find_pending_email_signup_by_email, find_pending_email_signup_by_handle,
 };
 use crate::service::oauth::types::OAuthUserResult;
+use redis::aio::ConnectionManager;
 use sapphire_entity::common::OAuthProvider;
 use sapphire_errors::errors::{Errors, ServiceResult};
-use redis::aio::ConnectionManager;
 use sea_orm::ConnectionTrait;
 use tracing::info;
 

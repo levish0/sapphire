@@ -2,9 +2,9 @@ use super::common::ISSUER;
 use crate::repository::user::{
     UserUpdateParams, repository_get_user_by_id, repository_update_user,
 };
+use rand::RngExt;
 use sapphire_dto::auth::response::TotpSetupResponse;
 use sapphire_errors::errors::{Errors, ServiceResult};
-use rand::RngExt;
 use sea_orm::{DatabaseConnection, TransactionTrait};
 use totp_rs::{Algorithm, Secret, TOTP};
 use tracing::info;

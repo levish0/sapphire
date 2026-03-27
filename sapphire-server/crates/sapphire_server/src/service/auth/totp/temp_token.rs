@@ -1,8 +1,8 @@
 use crate::utils::redis_cache::{get_optional_json_and_delete, set_json_with_ttl};
 use chrono::{DateTime, Utc};
-use sapphire_errors::errors::Errors;
 use rand::Rng;
 use redis::aio::ConnectionManager as RedisClient;
+use sapphire_errors::errors::Errors;
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
 

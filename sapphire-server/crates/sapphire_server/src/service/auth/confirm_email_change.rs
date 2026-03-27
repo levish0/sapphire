@@ -3,8 +3,8 @@ use crate::repository::user::{
 };
 use crate::service::auth::change_email::EmailChangeData;
 use crate::utils::redis_cache::get_json_and_delete;
-use sapphire_errors::errors::{Errors, ServiceResult};
 use redis::aio::ConnectionManager;
+use sapphire_errors::errors::{Errors, ServiceResult};
 use sea_orm::{DatabaseConnection, TransactionTrait};
 use tracing::info;
 use uuid::Uuid;

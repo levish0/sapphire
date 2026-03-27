@@ -3,8 +3,8 @@ use std::sync::Arc;
 use tokio::sync::broadcast;
 
 use crate::connection::{MeilisearchClient, R2AssetsClient};
-use sapphire_dto::action_logs::ActionLogResponse;
 use reqwest::Client as HttpClient;
+use sapphire_dto::action_logs::ActionLogResponse;
 use sea_orm::DatabaseConnection as PostgresqlClient;
 
 /// JetStream context for publishing jobs to NATS

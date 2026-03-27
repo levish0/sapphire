@@ -1,5 +1,5 @@
-use sapphire_config::ServerConfig;
 use meilisearch_sdk::client::Client;
+use sapphire_config::ServerConfig;
 
 #[derive(Debug, Clone)]
 pub struct MeilisearchClient {

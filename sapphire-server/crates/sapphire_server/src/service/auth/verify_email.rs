@@ -4,8 +4,8 @@ use crate::repository::user::{
 };
 use crate::utils::crypto::token::generate_secure_token;
 use crate::utils::redis_cache::{delete_key, get_json, get_ttl_seconds};
-use sapphire_errors::errors::{Errors, ServiceResult};
 use redis::aio::ConnectionManager;
+use sapphire_errors::errors::{Errors, ServiceResult};
 use sea_orm::{DatabaseConnection, TransactionTrait};
 use serde::{Deserialize, Serialize};
 use std::sync::LazyLock;
@@ -78,8 +78,11 @@ pub async fn find_pending_email_signup_by_email(
     redis_conn: &ConnectionManager,
     email: &str,
 ) -> ServiceResult<Option<(String, PendingEmailSignupData)>> {
-    find_pending_email_signup_by_index(redis_conn, &sapphire_constants::email_signup_email_key(email))
-        .await
+    find_pending_email_signup_by_index(
+        redis_conn,
+        &sapphire_constants::email_signup_email_key(email),
+    )
+    .await
 }
 
 pub async fn find_pending_email_signup_by_handle(

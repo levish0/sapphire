@@ -1,5 +1,5 @@
-use sapphire_errors::errors::Errors;
 use reqwest::Client as HttpClient;
+use sapphire_errors::errors::Errors;
 use serde::{Deserialize, Serialize};
 use tracing::error;
 

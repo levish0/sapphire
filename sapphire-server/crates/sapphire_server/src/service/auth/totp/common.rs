@@ -1,5 +1,5 @@
-use sapphire_errors::errors::{Errors, ServiceResult};
 use rand::RngExt;
+use sapphire_errors::errors::{Errors, ServiceResult};
 use totp_rs::{Algorithm, Secret, TOTP};
 
 /// Constant value for issuer.

@@ -5,11 +5,11 @@ use crate::repository::oauth::find_user_by_oauth::repository_find_user_by_oauth;
 use crate::service::oauth::provider::client::exchange_code;
 use crate::service::oauth::types::OAuthStateData;
 use crate::utils::redis_cache::get_json_and_delete;
+use redis::aio::ConnectionManager;
 use sapphire_constants::oauth_state_key;
 use sapphire_dto::oauth::request::OAuthAuthorizeFlow;
 use sapphire_entity::common::OAuthProvider;
 use sapphire_errors::errors::{Errors, ServiceResult};
-use redis::aio::ConnectionManager;
 use sea_orm::{DatabaseConnection, TransactionTrait};
 use uuid::Uuid;
 

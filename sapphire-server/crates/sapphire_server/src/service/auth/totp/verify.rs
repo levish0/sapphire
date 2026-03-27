@@ -5,8 +5,8 @@ use crate::repository::user::{
 use crate::service::auth::session::SessionService;
 use crate::service::auth::totp::TotpTempToken;
 use crate::utils::crypto::backup_code::verify_backup_code;
-use sapphire_errors::errors::{Errors, ServiceResult};
 use redis::aio::ConnectionManager as RedisClient;
+use sapphire_errors::errors::{Errors, ServiceResult};
 use sea_orm::{DatabaseConnection, TransactionTrait};
 use tracing::info;
 

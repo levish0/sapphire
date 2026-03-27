@@ -1,6 +1,6 @@
-use sapphire_errors::errors::Errors;
 use redis::AsyncCommands;
 use redis::aio::ConnectionManager as RedisClient;
+use sapphire_errors::errors::Errors;
 use serde::{Serialize, de::DeserializeOwned};
 
 /// Cache a JSON-serialized value in Redis with TTL

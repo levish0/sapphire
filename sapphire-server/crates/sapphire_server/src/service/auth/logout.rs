@@ -1,6 +1,6 @@
 use crate::service::auth::session::SessionService;
-use sapphire_errors::errors::ServiceResult;
 use redis::aio::ConnectionManager;
+use sapphire_errors::errors::ServiceResult;
 use tracing::info;
 
 ///

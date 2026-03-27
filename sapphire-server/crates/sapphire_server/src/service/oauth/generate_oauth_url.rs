@@ -2,11 +2,11 @@ use crate::service::oauth::provider::client::generate_auth_url;
 use crate::service::oauth::provider::config::OAuthProviderConfig;
 use crate::service::oauth::types::OAuthStateData;
 use crate::utils::redis_cache::store_json_for_token_with_ttl;
+use redis::aio::ConnectionManager;
 use sapphire_dto::oauth::request::OAuthAuthorizeFlow;
 use sapphire_dto::oauth::response::OAuthUrlResponse;
 use sapphire_entity::common::OAuthProvider;
 use sapphire_errors::errors::ServiceResult;
-use redis::aio::ConnectionManager;
 use uuid::Uuid;
 
 pub async fn service_generate_oauth_url<P: OAuthProviderConfig>(

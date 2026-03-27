@@ -1,6 +1,6 @@
 use crate::service::oauth::types::GoogleUserInfo;
-use sapphire_errors::errors::Errors;
 use reqwest::Client as HttpClient;
+use sapphire_errors::errors::Errors;
 
 const GOOGLE_USER_INFO_URL: &str = "https://www.googleapis.com/oauth2/v2/userinfo";
 

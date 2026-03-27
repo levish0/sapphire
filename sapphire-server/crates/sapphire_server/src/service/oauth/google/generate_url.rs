@@ -1,10 +1,10 @@
 use super::GoogleProvider;
 use crate::service::oauth::generate_oauth_url::service_generate_oauth_url;
+use redis::aio::ConnectionManager;
 use sapphire_dto::oauth::request::OAuthAuthorizeFlow;
 use sapphire_dto::oauth::response::OAuthUrlResponse;
 use sapphire_entity::common::OAuthProvider;
 use sapphire_errors::errors::ServiceResult;
-use redis::aio::ConnectionManager;
 
 pub async fn service_generate_google_oauth_url(
     redis_conn: &ConnectionManager,

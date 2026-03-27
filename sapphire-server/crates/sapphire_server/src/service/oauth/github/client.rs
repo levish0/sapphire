@@ -1,6 +1,6 @@
 use crate::service::oauth::types::{GithubEmail, GithubUserInfo};
-use sapphire_errors::errors::Errors;
 use reqwest::Client as HttpClient;
+use sapphire_errors::errors::Errors;
 
 const GITHUB_USER_INFO_URL: &str = "https://api.github.com/user";
 const GITHUB_USER_EMAILS_URL: &str = "https://api.github.com/user/emails";
